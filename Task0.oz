@@ -19,6 +19,36 @@
 % end
 
 
+% local
+%     fun {MaxList L1}
+%      case L1
+%      of nil then 0
+%      [] X|Xr then
+%       if {MaxList Xr}>X then {MaxList Xr}
+%        else X
+%       end
+%      end
+%     end
+% in
+% {Browse {MaxList [1 2 3 4 3]}}
+% end
+
+
+% local
+%     fun {MaxList L1}
+%      case L1
+%      of nil then 0
+%      [] X|Xr then
+%       if {MaxList Xr}>X then {MaxList Xr}
+%        else X
+%       end
+%      end
+%     end
+% in
+% {Browse {MaxList {AtomToString 'Hello, World!'}}}
+% end
+
+
 local
     fun {MaxList L1}
      case L1
@@ -30,6 +60,5 @@ local
      end
     end
 in
-{Browse {MaxList [1 2 3 4 3]}}
+{Browse {Char.toAtom {MaxList {AtomToString 'Hello, World!'}}}}
 end
-
