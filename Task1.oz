@@ -45,7 +45,7 @@ local
 
     % Construct the result map
     fun {Result List}
-        [{ProductEvenPositions List 1} {SumOddPositions List 1}]
+        map('Product of even positions': {ProductEvenPositions List 1} 'Sum of odd positions': {SumOddPositions List 1})
     end
 
 in
@@ -54,18 +54,28 @@ in
     % Expected output: [8 9]
     % sum of odd positions: 1 + 3 + 5 = 9
     % product of even positions: 2 * 4 = 8
+    {Browse 'First test case'}
+    {Browse 'For the list [1 2 3 4 5], the result is:'}
     {Browse {Result [1 2 3 4 5]}}
+    {Browse ['------------------------------------']}
+
 
     % Test case 2
     % Expected output: [48 9]
     % sum of odd positions: 1 + 3 + 5 = 9
     % product of even positions: 2 * 4 * 6 = 48
+    {Browse 'Second test case'}
+    {Browse 'For the list [1 2 3 4 5 6], the result is:'}
     {Browse {Result [1 2 3 4 5 6]}}
+    {Browse ['------------------------------------']}
 
-    % Test case 3 (empty list, which is represented by nil in Oz)
+    % Test case 3 (empty list, which is represented by nil in Oz, this is a special case)
     % Expected output: [1 0]
     % sum of odd positions: 0
     % product of even positions: 1 (as there are no elements)
+    {Browse 'Third test case'}
+    {Browse 'For the list [], the result is:'}
     {Browse {Result nil}}
+    {Browse ['------------------------------------']}
 
 end

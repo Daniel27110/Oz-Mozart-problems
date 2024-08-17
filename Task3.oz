@@ -155,8 +155,13 @@ in
     %     2
     %    / \
     %   1   3
-    {Browse {InorderPostorder2BT [2 1 3] [2 3 1]}}
-    {Browse {InorderPreorder2BT [2 1 3] [1 2 3]}}
+    % The representation of this tree is: tree(2 tree(1 nil nil) tree(3 nil nil))
+    {Browse 'First test case'}
+    {Browse 'For the inorder list [1 2 3] and postorder list [1 3 2], the tree is:'}
+    {Browse {InorderPostorder2BT [1 2 3] [1 3 2]}}
+    {Browse 'For the inorder list [1 2 3] and preorder list [2 1 3], the tree is:'}
+    {Browse {InorderPreorder2BT [1 2 3] [2 1 3]}}
+    {Browse ['------------------------------------']}
 
     % Second test case:
     % Visual representation of the tree:
@@ -165,8 +170,13 @@ in
     %   2   6
     %  / \ / \
     % 1  3 5  7
+    % The representation of this tree is: tree(4 tree(2 tree(1 nil nil) tree(3 nil nil)) tree(6 tree(5 nil nil) tree(7 nil nil))
+    {Browse 'Second test case'}
+    {Browse 'For the inorder list [1 2 3 4 5 6 7] and postorder list [1 3 2 5 7 6 4], the tree is:'}
     {Browse {InorderPostorder2BT [1 2 3 4 5 6 7] [1 3 2 5 7 6 4]}}
+    {Browse 'For the inorder list [1 2 3 4 5 6 7] and preorder list [4 2 1 3 6 5 7], the tree is:'}
     {Browse {InorderPreorder2BT [1 2 3 4 5 6 7] [4 2 1 3 6 5 7]}}
+    {Browse ['------------------------------------']}
 
 
 end
