@@ -89,13 +89,13 @@ local
 in
 
     % First test case: Polynomial function with n = 100
-    {Browse 'Integral of X^2 + 2X + 1 from 0 to 1'}
-    {Browse {SimpsonsRule PolynomialFunction 0.0 1.0 100.0 0.0}}
+    {Browse 'Integral of X^2 + 2X + 1 from 0 to 1'} % expected result is ~2.333333333333333
+    {Browse {SimpsonsRule PolynomialFunction 0.0 1.0 10000.0 0.0}}
     {Browse ['------------------------------------']}
 
     % Second test case: Constant function with n = 100
-    {Browse 'Integral of 1 from 0 to 1'}
-    {Browse {SimpsonsRule ConstantFunction 0.0 1.0 100.0 0.0}}
+    {Browse 'Integral of 1 from 0 to 1'} % expected result is ~1
+    {Browse {SimpsonsRule ConstantFunction 0.0 1.0 10000.0 0.0}}
     {Browse ['------------------------------------']}
 
     % Third test case: Linear function with n = 10, 1000 and 100000
@@ -110,6 +110,8 @@ in
     {Browse 'Integral of 2X + 1 from 0 to 1 with n = 100000'}
     {Browse {SimpsonsRule LinearFunction 0.0 1.0 100000.0 0.0}}
     {Browse ['------------------------------------']}   
+    % we can see that the result is more accurate as n increases
+    % in this case, the result gets closer to 2, which is the expected value of the integral of 2X + 1 from 0 to 1
 
 
 
